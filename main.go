@@ -5,6 +5,7 @@ import (
 	"proxy-data-filter/internal/app"
 	"proxy-data-filter/internal/config"
 	"proxy-data-filter/internal/logging"
+	"proxy-data-filter/pkg/vld"
 )
 
 /**
@@ -27,6 +28,8 @@ func main() {
 	ctx = logging.ContextWithLogger(ctx, logger)
 
 	logging.GetLogger(ctx).Infoln("Starting application")
+
+	vld.InitValidator(ctx)
 
 	a, err := app.NewApp(cfg)
 	if err != nil {

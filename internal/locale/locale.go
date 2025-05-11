@@ -1,12 +1,12 @@
 package locale
 
 import (
-	"assistant-go/internal/logging"
 	"context"
 	"encoding/json"
 	"fmt"
 	"log"
 	"net/http"
+	"proxy-data-filter/internal/logging"
 	"sync"
 
 	"github.com/nicksnyder/go-i18n/v2/i18n"
